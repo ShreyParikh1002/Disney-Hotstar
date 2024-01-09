@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
     return(    
@@ -6,11 +7,9 @@ const Login = (props) => {
             <Content>
                 <CTA>
                     <CTALogoOne src="/images/cta-logo-one.svg" alt="" />
-                    <SignUp>GET ALL THERE</SignUp>
+                    <SignUp to="/home">ENTER THE DISNEY MAGIC</SignUp>
                     <Description>
-                        Get Premier Access to Raya and the Last Dragon for an additional fee
-                        with a Disney+ subscription. As of 03/26/21, the price of Disney+
-                        and The Disney Bundle will increase by $1.
+                        Welcome to the Dinsye+ Hotstar Frontend clone.
                     </Description>
                     <CTALogoTwo src="/images/cta-logo-two.png" alt="" />
                 </CTA>
@@ -71,7 +70,7 @@ const CTALogoOne = styled.img`
   width: 100%;
 `;
 
-const SignUp = styled.a`
+const SignUp = styled(Link)`
   font-weight: bold;
   color: #f9f9f9;
   background-color: #0063e5;
